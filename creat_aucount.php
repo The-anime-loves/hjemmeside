@@ -45,11 +45,11 @@
                     
                     
                 } else {
-                   $msg = "<h5 class='fejl'>Username or Passwoed issne 3 criktors loung or username is more then 20 critors </h5>";
+                   $msg = "<h5 class='fejl'>Username or Password is under 3 character long or username is more then 20 characters </h5>";
                 }
                 $mySQL->dbc = null;
             } else {
-                $msg = "<h5 class='fejl'> passwords dossen mats </h5>";    
+                $msg = "<h5 class='fejl'> passwords doesn't match </h5>";    
             }
         }
            
@@ -60,7 +60,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/A_Z_Webshop/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="gihub/css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/cerat_aucount.css">
         <meta charset="UTF-8">
     </head>
@@ -74,7 +74,7 @@
                     echo $msg;
                 }
             ?>
-            <h1>Cerate account</h1>
+            <h1>Create account</h1>
             <form method="POST">
                 <p>Username</p>
                 <input type="text" name="username" placeholder="Enter Username">
