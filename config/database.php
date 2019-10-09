@@ -7,6 +7,6 @@ return [
     
     "PASSWORD" => "",
     
-    "DB" => "azwebshop"
+    "DB" => "info_web"
     
 ]; 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'php/conn.php';
+require 'config/database.php';
 
 // checker om bruger er logget ind
 if(!isset($_SESSION['admin'])){
@@ -17,20 +17,22 @@ $msg = "";
 if(isset($_POST['create_news'])){
     
     $my_title=$_POST['title'];
-    $my_body=$_POST['body'];
+    $my_img=$_POST['img'];
+    $my_resume=$_post['resume'];
+    $my_rating=$_post['rating'];
     
     // inseter data i news og binder værdier til sql sætning
-    $mysql = "INSERT INTO news(title,body) VALUES (:title,:body)";
+    $mysql = "INSERT INTO create_anime(title,img,resume,rating) VALUES (:title,:img,:resume,:rating)";
     // klargøre $mysql statementet
     $stmt = $conn->prepare($mysql);
     // vi eksekvere $stmt og binder bruger indtastede værdier
-    $executed = $stmt->execute(array("title"=>$my_title,"body"=>$my_body));
+    $executed = $stmt->execute(array("title"=>$my_title,"img"=>$my_img,"resume"=>$my_resume,"rating"=>$my_rating));
     
     // checker om $stmt var succesfuld
     if ($executed){
-        $msg = "Du har succesfuldt oprettet en nyhed";
+        $msg = "Du har succesfuldt oprettet en recommended anime";
     }else{
-        $msg = "Kan ikke tilføje nyhed";
+        $msg = "Kan ikke tilføje animen";
     }
 }
 ?>
@@ -45,9 +47,9 @@ if(isset($_POST['create_news'])){
         <div class="main">
             <?php echo $msg; ?>
             <form method="POST">
-                <label for="title">Title på nyheden:</label>
+                <label for="title">Title på anime:</label>
                 <input type="text" id="title" name="title" placeholder="Skriv en title" required="required">
-                <label for="body">Body:</label>
+                <label for="body">img:</label>
                 <textarea id="body" name="body" placeholder="Skriv nyheden" style="height:200px" required="required"></textarea>
                 <input type="submit" name="create_news" value="Lav nyhed">
                 <div class="elevintra">
