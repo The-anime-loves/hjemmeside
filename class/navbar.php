@@ -32,7 +32,7 @@ class Navbar {
                             $navbar .='<li class="nav-item">';
                         }
                         
-                            $navbar .='<a class="nav-link" href="/A_Z_Webshop/'.$value.'">'.$key.'<span class="sr-only">(current)</span></a>';
+                            $navbar .='<a class="nav-link" href="/github/'.$value.'">'.$key.'<span class="sr-only">(current)</span></a>';
                         $navbar .='</li>';
                         }
                         $navbar .= '<li class="nav-item" >';
@@ -50,7 +50,7 @@ class Navbar {
                             $navbar .='<li class="nav-item">';
                         }
                         
-                            $navbar .='<a class="nav-link" href="/A_Z_Webshop/'.$value.'">'.$key.'<span class="sr-only">(current)</span></a>';
+                            $navbar .='<a class="nav-link" href="/github/'.$value.'">'.$key.'<span class="sr-only">(current)</span></a>';
                         $navbar .='</li>';     
                     }
                 $navbar .='</ul>';
