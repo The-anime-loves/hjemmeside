@@ -4,13 +4,13 @@ session_start();
 require 'config/database.php';
 
 // checker om bruger er logget ind
-if(!isset($_SESSION['admin'])){
-    header("location:index.php");
+//if(!isset($_SESSION['admin'])){
+//    header("location:index.php");
 
 // ellers check om bruger er elev og sende dem væk hvis de er
-}elseif ($_SESSION['admin'] !== 1) {
-    header("location:elevintra.php");
-}
+//}elseif ($_SESSION['admin'] !== 1) {
+//    header("location:elevintra.php");
+//}
 
 $msg = "";
 // checker om create news er blevet trykket på
@@ -47,10 +47,14 @@ if(isset($_POST['create_news'])){
         <div class="main">
             <?php echo $msg; ?>
             <form method="POST">
-                <label for="title">Title på anime:</label>
+                <label for="title">Title on the anime:</label>
                 <input type="text" id="title" name="title" placeholder="Skriv en title" required="required">
-                <label for="body">img:</label>
-                <textarea id="body" name="body" placeholder="Skriv nyheden" style="height:200px" required="required"></textarea>
+                <label for="img">Picture of the anime:</label>
+                <input type="file" name="picture">
+                <label for="resume">Resume:</label>
+                <textarea id="resume" name="resume" placeholder="Skriv din resume om anime" style="height:200px" required="required"></textarea>
+                <label for="rating">Rating</label>
+                <input type="" name="rating">
                 <input type="submit" name="create_news" value="Lav nyhed">
                 <div class="elevintra">
                     <a href="elevintra.php">Gå tilbage til elevintra</a>
