@@ -15,7 +15,7 @@
             echo Navbar::buildNav();
         ?>
         <div class="container">
-            <img src="/img/index/webshop_welcomeside.png" >
+            <img src="img/index/webshop_welcomeside.png" >
         </div>
         <?php
             require 'html/foot.html';
