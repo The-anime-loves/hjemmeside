@@ -8,9 +8,9 @@ class AnimeTabel {
         if(isset($_GET["search"])){
             $search = $_GET["search"];
             $bind = ["%$search%", "$search%","$search%"];
-            $sql = "SELECT * FROM computers_view WHERE name LIKE ? OR brand_name LIKE ? OR type_name LIKE ?";
+            $sql = "SELECT name, img, rating FROM amine WHERE name LIKE ?";
         } else {
-            $sql = "SELECT * FROM computers_view";
+            $sql = "SELECT name, img, rating FROM anime";
         }
         
         $mySQL = new MySQL();
@@ -34,7 +34,7 @@ class AnimeTabel {
                     $anime .='<tr>';
                         $anime .='<th>img</th>';
                         $anime .='<th>Name</th>'; 
-                        $anime .='<th>see</th>';
+                        $anime .='<th>Rating</th>';
                     $anime .='</tr>';
                 $anime .='</thead>';
                 $anime .='<tbody>';
