@@ -32,14 +32,14 @@ input[type=text]{
     width: 250px;
     height: 30px;
     padding: 2%;
-    border: #ccc 1px solid;
+    border: yellowgreen 2px solid;
 }
 
 textarea{
     width: 350px;
     height: 50px;
     padding: 3%;
-    border: yellowgreen 3px solid;
+    border: yellowgreen 2px solid;
 }
 
 input[type=submit] {
