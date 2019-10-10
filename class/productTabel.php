@@ -34,10 +34,7 @@ class ProductTabel {
                     $productTabel .='<tr>';
                         $productTabel .='<th>img</th>';
                         $productTabel .='<th>Name</th>'; 
-                        $productTabel .='<th>Brand</th>';
-                        $productTabel .='<th>Type</th>';
-                        $productTabel .='<th>Price</th>';
-                        $productTabel .='<th>Add</th>';
+                        $productTabel .='<th>see</th>';
                     $productTabel .='</tr>';
                 $productTabel .='</thead>';
                 $productTabel .='<tbody>';
