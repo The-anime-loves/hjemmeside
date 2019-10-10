@@ -1,7 +1,7 @@
 <?php
     session_start();    
     require 'class/navbar.php';
-    require 'class/productTabel.php';
+    require 'class/animeTabel.php';
     require 'class/mySQL.php';
     
     
