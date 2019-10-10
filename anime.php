@@ -18,7 +18,7 @@
         echo Navbar::buildNav();
         ?>
         <?php
-        echo productTabel::buildProductTabel();
+        echo AnimeTabel::buildAnimeTabel();
         ?>
         <?php
             require 'html/foot.html';
