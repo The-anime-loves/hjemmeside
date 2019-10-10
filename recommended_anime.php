@@ -30,9 +30,9 @@ if(isset($_POST['create_news'])){
     
     // checker om $stmt var succesfuld
     if ($executed){
-        $msg = "Du har succesfuldt oprettet en recommended anime";
+        $msg = "You have succesfully made a recommended anime";
     }else{
-        $msg = "Kan ikke tilføje animen";
+        $msg = "wasn't able too create the recommendtation";
     }
 }
 ?>
@@ -48,14 +48,14 @@ if(isset($_POST['create_news'])){
             <?php echo $msg; ?>
             <form method="POST">
                 <label for="title">Title on the anime:</label>
-                <input type="text" id="title" name="title" placeholder="Skriv en title" required="required">
+                <input type="text" id="title" name="title" placeholder="Write the title" required="required">
                 <label for="img">Picture of the anime:</label>
                 <input type="file" name="picture">
                 <label for="resume">Resume:</label>
-                <textarea id="resume" name="resume" placeholder="Skriv din resume om anime" style="height:200px" required="required"></textarea>
+                <textarea id="resume" name="resume" placeholder="Write a resume" style="height:200px" required="required"></textarea>
                 <label for="rating">Rating</label>
                 <input type="" name="rating">
-                <input type="submit" name="create_news" value="Lav nyhed">
+                <input type="submit" name="create_news" value="Recommed the anime">
                 <div class="elevintra">
                     <a href="elevintra.php">Gå tilbage til elevintra</a>
                 </div>
