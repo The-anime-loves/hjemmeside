@@ -25,39 +25,39 @@ class ProductTabel {
         $result = $stat->fetchAll(PDO::FETCH_ASSOC);
         
         
-        $productTabel = '<div class="container">';
+        $anime = '<div class="container">';
             if(isset($_GET["search"])){
-                $productTabel .='<a href="Produks.php">Reset Search</a>';
+                $anime .='<a href="Produks.php">Reset Search</a>';
             }
-            $productTabel .= '<table class="table table-hover">';
-                $productTabel .='<thead class="thead-dark">';
-                    $productTabel .='<tr>';
-                        $productTabel .='<th>img</th>';
-                        $productTabel .='<th>Name</th>'; 
-                        $productTabel .='<th>see</th>';
-                    $productTabel .='</tr>';
-                $productTabel .='</thead>';
-                $productTabel .='<tbody>';
+            $anime .= '<table class="table table-hover">';
+                $anime .='<thead class="thead-dark">';
+                    $anime .='<tr>';
+                        $anime .='<th>img</th>';
+                        $anime .='<th>Name</th>'; 
+                        $anime .='<th>see</th>';
+                    $anime .='</tr>';
+                $anime .='</thead>';
+                $anime .='<tbody>';
                 
                 for ($i = 0; $i< count($result); $i++){
-                    $productTabel .='<tr>';
-                        //$productTabel .='<th scope="row">'.(1+$i).'</th>';
-                        $productTabel .='<td width="25%"><img width="50%" src="img/product/'.$result[$i]["img"].'"></td>';
-                        $productTabel .='<td width="30%">'.$result[$i]["name"].'</td>';
-                        $productTabel .='<td>'.$result[$i]["brand_name"].'</td>';
-                        $productTabel .='<td>'.$result[$i]["type_name"].'</td>';
-                        $productTabel .='<td>'.$result[$i]["product_price"].' kr</td>';
-                        $productTabel .='<td>';
-                            $productTabel .= '<form action="cart.php" method="POST">';
-                                $productTabel .= '<input type="hidden" name="product_id" value="'.$result[$i]["serial_number"].'">';
-                                $productTabel .='<button type="submit" name="Add_product">Add</button>';
-                            $productTabel .= '</form>';
-                        $productTabel .= '</td>';
-                    $productTabel .='</tr>';
+                    $anime .='<tr>';
+                        //$anime .='<th scope="row">'.(1+$i).'</th>';
+                        $anime .='<td width="25%"><img width="50%" src="img/product/'.$result[$i]["img"].'"></td>';
+                        $anime .='<td width="30%">'.$result[$i]["name"].'</td>';
+                        $anime .='<td>'.$result[$i]["brand_name"].'</td>';
+                        $anime .='<td>'.$result[$i]["type_name"].'</td>';
+                        $anime .='<td>'.$result[$i]["product_price"].' kr</td>';
+                        $anime .='<td>';
+                            $anime .= '<form action="cart.php" method="POST">';
+                                $anime .= '<input type="hidden" name="product_id" value="'.$result[$i]["serial_number"].'">';
+                                $anime .='<button type="submit" name="Add_product">Add</button>';
+                            $anime .= '</form>';
+                        $anime .= '</td>';
+                    $anime .='</tr>';
                 }
-                $productTabel .='</tbody>';
-            $productTabel.='</table>';
-        $productTabel .='</div>"';
-        return $productTabel;
+                $anime .='</tbody>';
+            $anime.='</table>';
+        $anime .='</div>"';
+        return $anime;
     } 
 }

@@ -39,7 +39,7 @@ if(isset($_POST['create_news'])){
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="css/lave_nyheder.css" type="text/css" rel="stylesheet">
+        <link href="css/Recommend_anime.css" type="text/css" rel="stylesheet">
         <meta charset="UTF-8">
         <title></title>
     </head>
@@ -50,11 +50,11 @@ if(isset($_POST['create_news'])){
                 <label for="title">Title on the anime:</label>
                 <input type="text" id="title" name="title" placeholder="Write the title" required="required">
                 <label for="img">Picture of the anime:</label>
-                <input type="file" name="picture">
+                <input type="file" name="picture"><br>
                 <label for="resume">Resume:</label>
                 <textarea id="resume" name="resume" placeholder="Write a resume" style="height:200px" required="required"></textarea>
                 <label for="rating">Rating</label>
-                <input type="" name="rating">
+                <input type="number" name="rating">
                 <input type="submit" name="create_news" value="Recommed the anime">
                 <div class="elevintra">
                     <a href="index.php"></a>
