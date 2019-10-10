@@ -6,7 +6,7 @@ class Navbar {
     public static function buildNav(){
         
         $left = ["Home"=>"index.php"];
-        $right = ["Cart" => "cart.php","Products" => "Produks.php"];
+        $right = ["Anime"=>"anime.php"];
                 
         if(isset($_SESSION['login_user'])){
             $right = array_merge($right,[$_SESSION['login_user']=>"#","Log out"=>"logout.php"]);
@@ -36,7 +36,7 @@ class Navbar {
                         $navbar .='</li>';
                         }
                         $navbar .= '<li class="nav-item" >';
-                            $navbar .='<form class="form-inline" method="GET" action="Produks.php">';
+                            $navbar .='<form class="form-inline" method="GET" action="index.php">';
                             $navbar .='<input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">';
                             $navbar .='<button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>';
                             $navbar .='</form>';
