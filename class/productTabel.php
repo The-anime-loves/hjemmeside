@@ -1,8 +1,8 @@
 <?php
 
-class ProductTabel {
+class AnimeTabel {
     
-    public static function buildProductTabel(){
+    public static function buildAnimeTabel(){
         
         
         if(isset($_GET["search"])){
