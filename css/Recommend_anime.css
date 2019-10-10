@@ -54,6 +54,9 @@ margin-top: 3%;
 input[type=submit]:hover {
   background-color: #00cc00;
 }
+input[type=number]{
+   border: #ccc 1px solid;
+}
 
 .return{
     width: 100px;

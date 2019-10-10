@@ -53,7 +53,7 @@ if(isset($_POST['create_news'])){
                 <input type="file" name="picture"><br><br>
                 <label for="resume">Resume:</label><br>
                 <textarea id="resume" name="resume" placeholder="Write a resume" style="height:200px" required="required"></textarea><br>
-                <label for="rating">Rating</label>
+                <label for="rating">Rating:</label>
                 <input type="number" name="rating"><br>
                 <input type="submit" name="create_news" value="Recommed the anime">
                 <div class="return">
