@@ -48,16 +48,16 @@ if(isset($_POST['create_news'])){
             <?php echo $msg; ?>
             <form method="POST">
                 <label for="title">Title on the anime:</label>
-                <input type="text" id="title" name="title" placeholder="Write the title" required="required">
-                <label for="img">Picture of the anime:</label>
-                <input type="file" name="picture"><br>
-                <label for="resume">Resume:</label>
-                <textarea id="resume" name="resume" placeholder="Write a resume" style="height:200px" required="required"></textarea>
+                <input type="text" id="title" name="title" placeholder="Write the title" required="required"><br><br>
+                <label for="img">Picture of the anime:</label><br>
+                <input type="file" name="picture"><br><br>
+                <label for="resume">Resume:</label><br>
+                <textarea id="resume" name="resume" placeholder="Write a resume" style="height:200px" required="required"></textarea><br>
                 <label for="rating">Rating</label>
-                <input type="number" name="rating">
+                <input type="number" name="rating"><br>
                 <input type="submit" name="create_news" value="Recommed the anime">
-                <div class="elevintra">
-                    <a href="index.php"></a>
+                <div class="return">
+                    <a href="index.php">home</a>
                 </div>
             </form>
         </div>
