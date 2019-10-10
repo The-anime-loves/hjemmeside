@@ -57,7 +57,7 @@ if(isset($_POST['create_news'])){
                 <input type="" name="rating">
                 <input type="submit" name="create_news" value="Recommed the anime">
                 <div class="elevintra">
-                    <a href="elevintra.php">Gå tilbage til elevintra</a>
+                    <a href="index.php"></a>
                 </div>
             </form>
         </div>
