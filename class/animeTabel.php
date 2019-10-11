@@ -43,16 +43,8 @@ class AnimeTabel {
                     $anime .='<tr>';
                         //$anime .='<th scope="row">'.(1+$i).'</th>';
                         $anime .='<td width="25%"><img width="50%" src="img/product/'.$result[$i]["img"].'"></td>';
-                        $anime .='<td width="30%">'.$result[$i]["name"].'</td>';
-                        $anime .='<td>'.$result[$i]["brand_name"].'</td>';
-                        $anime .='<td>'.$result[$i]["type_name"].'</td>';
-                        $anime .='<td>'.$result[$i]["product_price"].' kr</td>';
-                        $anime .='<td>';
-                            $anime .= '<form action="cart.php" method="POST">';
-                                $anime .= '<input type="hidden" name="product_id" value="'.$result[$i]["serial_number"].'">';
-                                $anime .='<button type="submit" name="Add_product">Add</button>';
-                            $anime .= '</form>';
-                        $anime .= '</td>';
+                        $anime .='<td width="30%">'.$result[$i]["title"].'</td>';
+                        $anime .='<td>'.$result[$i]["rating"].'</td>';
                     $anime .='</tr>';
                 }
                 $anime .='</tbody>';
