@@ -3,12 +3,14 @@ class New_anime{
     
     public static function newAnime(){
         // henter database connection
-        require 'config/database.php';
-
+        require 'mySQL.php';
+        
+        $mySQL = new MySQL();
+        
         // selecter data fra databasen
         $sql = "SELECT title,img,rating FROM anime ORDER BY id DESC LIMIT 6";
         // klargøre $sql statement 
-        $stmt = $conn->prepare($sql);
+        $stmt = $mySQL->dbc->prepare($sql);
         // eksekvere $stmt variablen
         $stmt->execute();
 
@@ -20,7 +22,7 @@ class New_anime{
 
             // køre igennem dataen og lave nyheds html
             foreach($data as $row){
-                $anime .= '<div class="news">'; 
+                $anime .= '<div class="new_anime">'; 
                     $anime .= '<h3>'. $row['title']. '</h3>';
                     $anime .= ($row['img']);
                     $anime .= ($row['rating']);
@@ -32,15 +34,3 @@ class New_anime{
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>

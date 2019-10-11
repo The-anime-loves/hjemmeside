@@ -1,7 +1,7 @@
 <?php
     session_start();
     require 'class/navbar.php';
-    //require 'class/newest_anime.php';
+    require 'class/newest_anime.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
             echo Navbar::buildNav();
         ?>
         <?php
-            //echo New_anime::newAnime();
+            echo New_anime::newAnime();
         ?>
         <?php
             require 'html/foot.html';

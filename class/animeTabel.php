@@ -33,7 +33,7 @@ class AnimeTabel {
                 $anime .='<thead class="thead-dark">';
                     $anime .='<tr>';
                         $anime .='<th>img</th>';
-                        $anime .='<th>Name</th>'; 
+                        $anime .='<th>Title</th>'; 
                         $anime .='<th>Rating</th>';
                     $anime .='</tr>';
                 $anime .='</thead>';
